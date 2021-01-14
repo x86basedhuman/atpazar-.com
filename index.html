@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("./img/at.jpg");
+
+            /* Full height */
+            height: 100%;
+            width: auto;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .horse {
+            background: url("./img/button.png");
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        video {
+            width: 100%;
+            height: 700px;
+        }
+
+
+        p {
+            position: absolute;
+            white-space: nowrap;
+            animation: floatText 35s infinite alternate ease-in-out;
+        }
+
+        @-webkit-keyframes floatText {
+            from {
+                left: 00%;
+            }
+
+            to {
+                /* left: auto; */
+                left: 100%;
+            }
+        }
+
+        a {
+            padding: 10px;
+        }
+
+        .slider {
+            height: 100px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $('.video').parent().click(function () {
+            if ($(this).children(".video").get(0).paused) {
+                $(this).children(".video").get(0).play();
+                $(this).children(".playpause").fadeOut();
+            } else {
+                $(this).children(".video").get(0).pause();
+                $(this).children(".playpause").fadeIn();
+            }
+        });
+    </script>
+</head>
+
+<body onload="play()">
+    <div class="bg">
+        <div class="slider">
+            <h3 style="color: white;"> Günün Atları</h3>
+            <p><a href="https://www.instagram.com/p/B8wKTcMBmhd/">Bulut</a>
+                <a href="https://www.instagram.com/p/CI-4thCBan1/">Güneş</a>
+                <a href="https://www.instagram.com/p/CJOeAN-hKix/">melek</a>
+                <a href="https://www.instagram.com/p/CGCa3LIhMN6/">Şampanya</a>
+                <a href="https://www.instagram.com/p/CIiCVwKFBGV/">Cennet</a>
+                <a href="https://www.instagram.com/p/CB-etz8h5SA/">Kristal</a>
+                <a href="https://www.instagram.com/p/CISaBIehPZz/">inci</a>
+                <a href="https://www.instagram.com/p/CIXoT0WBmDv/ ">Fırtına</a>
+                <a href="https://www.instagram.com/p/B9_6fyIhmsa/">Kar yağışlı</a>
+                <a href="https://www.instagram.com/p/CD0-EmKhUak/ ">Pamuk Prenses</a>
+                <a href="https://www.instagram.com/p/CGksFiJhcqc/ ">Hatmi</a>
+                <a href="https://www.instagram.com/p/CJdacxUr_Qc/">Kartopu</a>
+                <a href="https://www.instagram.com/p/CIpqU3rhJUU/ ">Luna</a>
+                <a href="https://www.instagram.com/p/B8_tzxChcm0/ ">Yastık</a>
+                <a href="https://www.instagram.com/p/CJtGDEAhI3M/">Şeker</a></p>
+        </div>
+            <video id="vid" controls>
+                <source src="./atpazarı.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+</body>
+
+</html>
